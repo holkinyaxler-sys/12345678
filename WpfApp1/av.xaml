@@ -1,0 +1,33 @@
+﻿<Window x:Class="Bulochnaya.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вход" Height="260" Width="360" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Вход" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+        <StackPanel Grid.Row="2">
+            <Label Content="Имя пользователя" />
+            <TextBox x:Name="UsernameTextBox" Width="280"/>
+            <Label Content="Пароль" Margin="0,8,0,0"/>
+            <PasswordBox x:Name="PasswordBox" Width="280"/>
+        </StackPanel>
+
+        <TextBlock x:Name="ErrorTextBlock" Grid.Row="4" Foreground="Red" TextWrapping="Wrap" />
+
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Войти" Width="100" Margin="6" Click="LoginButton_Click"/>
+            <Button Content="Регистрация" Width="100" Margin="6" Click="RegisterButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
+
