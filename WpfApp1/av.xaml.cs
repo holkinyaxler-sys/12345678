@@ -1,17 +1,17 @@
 ﻿using System.Windows;
 using WpfApp1;
 
-namespace Bulochnaya
+namespace WpfApp1
 {
     public partial class LoginWindow : Window
     {
-        private readonly BulochnayaRepository _repo;
+        private readonly 12345678Repository _repo;
 
         public LoginWindow()
         {
             InitializeComponent();
-            string conn = "Server=.\\SQLEXPRESS;Database=AuthDemo;Integrated Security=true;";
-            _repo = new BulochnayaRepository(conn);
+            string conn = "Server=.\\SQLEXPRESS;Database=Bulochnaya;Integrated Security=true;";
+            _repo = new 12345678Repository(conn);
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
